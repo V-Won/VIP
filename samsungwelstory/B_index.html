@@ -1,0 +1,159 @@
+<!doctype html>
+<html class="is-smooth-scroll-compatible is-loading type-b" lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="삼성웰스토리는 식자재유통, 사내식당, 단체급식, 푸드 서비스 분야, 40년 식음 사업 역량과 노하우를 가진 글로벌 식음 기업입니다.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>삼성웰스토리 | 푸드서비스, 식자재유통</title>
+  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head> 
+
+<body>
+
+  <!-- box-header -->
+  <div class="box-header">
+    <div class="sub-menu">
+      <span><img src="static/images/sub_left.jpg" alt="" style="height: 14px;"></span>
+      <span><img src="static/images/sub_right.jpg" alt="" style="height: 24px;"></span>
+    </div>
+    <div class="menu-wrap">
+      <h1><a href="B_index.html"></a></h1>
+      <a href="B_sub.html" class="gnb"></a>
+      <a href="#none" class="etc"></a>
+    </div>
+  </div>
+  <!-- //box-header -->
+
+  <div class="wrap" data-scroll-container>
+    <div class="intro"></div>
+    <div class="globe"><img src="static/images/globe.jpg" alt="" style="height: 244px;"></div>
+    <div class="video"><img src="static/images/video.jpg" alt="" style="width: 100%"></div>
+    <div class="service">
+      <div class="title"></div>
+      <div class="title2"></div>
+      <div class="list"></div>
+    </div>
+    <div class="health">
+      <div class="text"><img src="static/images/text_health.jpg" alt="" style="width: 814px;"></div>
+    </div>
+    <div class="solution">
+      <div class="title"><img src="static/images/text_solution_b.jpg" alt="" style="width: 371px;"></div>
+      <div class="item-wrap">
+        <div class="item"><img src="static/images/item.jpg" alt=""></div>
+        <div class="item"><img src="static/images/item_2.jpg" alt=""></div>
+        <div class="item"><img src="static/images/item_3.jpg" alt=""></div>
+      </div>
+    </div>
+    <div class="story">
+      <div class="title"><img src="static/images/text_story_b.jpg" alt="" style="width: 563px;"></div>
+      <div class="img-wrap"><img src="static/images/img_story.jpg" alt="" style="width: 100%;"></div>
+    </div>
+    <div class="media">
+      <div class="title"><img src="static/images/text_media.jpg" alt="" style="width: 429px;"></div>
+      <div class="item-wrap">
+        <div class="item"><img src="static/images/img_news.jpg" alt=""></div>
+        <div class="item"><img src="static/images/img_news_2.jpg" alt=""></div>
+        <div class="item"><img src="static/images/img_news_3.jpg" alt=""></div>
+      </div>
+    </div>
+    <div class="bottom-wrap">
+      <div class="career">
+        <div class="text"><img src="static/images/text_career.jpg" alt="" style="width: 589px;"></div>
+      </div>
+      <div class="cs-center">
+        <div class="title"><img src="static/images/text_cs.png" alt="" style="height: 155px;"></div>
+        <div class="item"><img src="static/images/form.png" alt="" style="height: 602px;"></div>
+      </div>
+    </div>
+
+
+    <div class="box-footer">
+      <a href="#none" id="btn-top" class="btn-top"><img src="static/images/btn_top.png" alt=""></a>
+      <div class="top">
+        <div> <img src="static/images/footer_left.png" alt=""></div>
+        <div><img src="static/images/footer_right.png" alt=""></div>
+      </div>
+      <div class="bottom">
+        <div><img src="static/images/footer_bottom_!.png" alt=""></div>
+        <div><img src="static/images/footer_bottom_sns.png" alt=""></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="box-floating">
+    <a href="#none" class="icon-4"><img src="static/images/icon_4.svg" alt=""></a>
+    <a href="#none" class="icon-3"><img src="static/images/icon_3.svg" alt=""></a>
+    <a href="#none" class="icon-2"><img src="static/images/icon_2.svg" alt=""></a>
+    <a href="#none" class="icon is-active"><img src="static/images/icon_1.svg" alt=""></a>
+    <a href="#none" class="icon-btn-close"><img src="static/images/icon_close.svg" alt=""></a>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    /**
+     * data-scroll-section 사용x
+    */
+    const scrollContainer = document.querySelector('[data-scroll-container]');
+
+    const locoScroll = new LocomotiveScroll({
+      el: scrollContainer,
+      smooth: true,
+      lerp: 0.05,
+      multiplier: 1.2,
+      tablet: {
+        breakpoint: 0,
+      },
+      smartphone: {
+        smooth: false,
+        direction: 'vertical',
+        gestureDirection: 'vertical'
+      }
+    });
+
+    // Header
+    /*
+    const header = document.querySelector('.box-header');
+    let lastScrollY = 0;
+
+    locoScroll.on('scroll', (instance) => {
+      const scrollY = instance.scroll.y;
+
+      if (scrollY > 30) {
+        if (scrollY > lastScrollY) {
+          header.classList.add('hide');
+        } else {
+          header.classList.remove('hide');
+        }
+      }
+
+      lastScrollY = scrollY;
+
+      if (scrollY > 100) {
+        header.classList.add('is-active');
+      } else {
+        header.classList.remove('is-active');
+      }
+    });
+   
+    header.addEventListener('mouseenter', () => {
+      header.classList.add('is-hover');
+    });
+
+    header.addEventListener('mouseleave', () => {
+      header.classList.remove('is-hover');
+    });
+    */
+  </script>
+
+</body>
+
+</html>

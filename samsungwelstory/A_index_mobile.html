@@ -82,9 +82,9 @@
         </li>
         <li>
           <p class="text-1">
-            삼성웰스토리는<br>
-            고객의 삶에 새로운 경험을 만들고<br>
-            건강한 미래를 열어가고 있습니다
+            삼성웰스토리는 <br>
+            건강한 일상에 새로운 경험을 더하고,<br>
+            브랜드의 성장에 함께 합니다
           </p>
         </li>
         <li>
@@ -249,7 +249,7 @@
         <li>
           <div class="thumb"><img src="static/images/mobile/img_news.jpg" alt=""></div>
           <div class="text-wrap">
-            <div class="category">보도자료<em></em>24.05.09</div>
+            <div class="category">보도자료<em></em><span>24.05.09</span></div>
             <div class="title">삼성웰스토리, 베트남 신물류센터 준공</div>
           </div>
           <div class="tags">
@@ -261,7 +261,7 @@
         <li>
           <div class="thumb"><img src="static/images/mobile/img_news_2.jpg" alt=""></div>
           <div class="text-wrap">
-            <div class="category">보도자료<em></em>24.05.09</div>
+            <div class="category">보도자료<em></em><span>24.05.09</span></div>
             <div class="title">삼성웰스토리, 저탄소·친환경 농산물 유통 확대로 ESG 경영 선도</div>
           </div>
           <div class="tags">
@@ -273,7 +273,7 @@
         <li>
           <div class="thumb"><img src="static/images/mobile/img_news_3.jpg" alt=""></div>
           <div class="text-wrap">
-            <div class="category">보도자료<em></em>24.05.09</div>
+            <div class="category">보도자료<em></em><span>24.05.09</span></div>
             <div class="title">삼성웰스토리, 조리 공수 절반 줄인 레시피로 케이터링 고객사 인력난 돕는다</div>
           </div>
           <div class="tags">
@@ -518,13 +518,16 @@
           });
           gsap.to(".left-motion", {
             x: 0,
-            y: -119,
+            //y: -119,
+            y: -84,
             duration: 1,
             ease: "power2.out"
           });
           gsap.to(".right-motion", {
-            x: 0,
-            y: 121,
+            // x: 0,
+            // y: 121,
+            x: -117,
+            y: 101,
             duration: 1,
             //ease: "power2.out"
           });

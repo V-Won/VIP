@@ -1,0 +1,185 @@
+<!doctype html>
+<html class="is-smooth-scroll-compatible is-loading" lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="삼성웰스토리는 식자재유통, 사내식당, 단체급식, 푸드 서비스 분야, 40년 식음 사업 역량과 노하우를 가진 글로벌 식음 기업입니다.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>삼성웰스토리 | 푸드서비스, 식자재유통</title>
+  <link rel="stylesheet" href="static/css/style_mo.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+<body>
+
+  <!-- box-header -->
+  <div class="box-header sub is-active">
+    <h1><a href="A_index.html"></a></h1>
+    <a href="A_sub_2_mobile.html" class="gnb"></a>
+  </div>
+  <!-- //box-header -->
+
+  <div id="subA" class="sub wrap" data-scroll-container>
+    <div class="title">
+      <span>푸드서비스</span>
+      <h2>오늘도 건강하고 <br>
+        맛있는 식사를 <br>
+        제공합니다</h2>
+      <h3>다양한 고객의 요구에 맞춘 <br>
+        맞춤형 식단</h3>
+      <p>최신 식품 연구와 첨단 기술을 바탕으로 <br>
+        고품질의 급식 서비스를 제공합니다. </p>
+    </div>
+    <div class="supply">
+      <h3>다양한 고객의 요구에 맞춘 <br>
+        맞춤형 식단</h3>
+      <p>최신 식품 연구와 첨단 기술을 바탕으로 <br>
+        고품질의 급식 서비스를 제공합니다. </p>
+    </div>
+    <div class="feature">
+      <h4>서비스 특징</h4>
+      <div class="img-wrap" style="text-align: left;"><img src="static/images/mobile/subA/img_feature.jpg" alt="" style="width: 324px;"></div>
+    </div>
+    <div class="process">
+      <h4>서비스 이용 프로세스</h4>
+      <div class="img-wrap" style="text-align: center;"><img src="static/images/mobile/subA/img_process.jpg" alt="" style="width: 311px;"></div>
+    </div>
+    <div class="service">
+      <h4>서비스 이용현황</h4>
+      <strong>전국 2,000여개 지점 <br>
+        연간 제공 식사 수 2억끼 이상</strong>
+      <div class="img-wrap" style="text-align: center;"><img src="static/images/mobile/subA/img_service.jpg" alt="" style="width: 324px;"></div>
+    </div>
+    <div class="state">
+      <h4>서비스 납품 현황</h4>
+      <div class="item-wrap">
+        <ul style="width: calc(228px * 2 + 60px);">
+          <li>
+            <img src="static/images/mobile/subA/img_state.jpg" alt="">
+            <h5>오피스 산업체</h5>
+            <p>직장생활의 오아시스, 사내식당</p>
+          </li>
+          <li>
+            <img src="static/images/mobile/subA/img_state_2.jpg" alt="">
+            <h5>대학교</h5>
+            <p>캠퍼스의 활력과 낭만, <br>
+              학생식당.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="inquiry">
+      <div class="text"><img src="static/images/mobile/subA/text_inquiry.png" alt="" style="width: 324px"></div>
+    </div>
+    <div class="box-footer">
+      <a href="#none" id="btn-top" class="btn-top"><img src="static/images/btn_top.png" alt=""></a>
+      <div class="footer-wrap">
+        <img src="static/images/mobile/footer_1.jpg" alt="" style="width: 156px;">
+        <div class="menu-wrap">
+          <a href="#none"><img src="static/images/mobile/menu_left.jpg" alt="" style="height: 34px;"></a>
+          <a href="#none"><img src="static/images/mobile/menu_right.jpg" alt="" style="height: 34px;"></a>
+        </div>
+        <img src="static/images/mobile/footer_2.jpg" alt=""style="width: 287px;">
+      </div>
+    </div>
+  </div>
+
+  <div class="box-floating">
+    <a href="#none" class="icon-4"><img src="static/images/icon_4.svg" alt=""></a>
+    <a href="#none" class="icon-3"><img src="static/images/icon_3.svg" alt=""></a>
+    <a href="#none" class="icon-2"><img src="static/images/icon_2.svg" alt=""></a>
+    <a href="#none" class="icon is-active"><img src="static/images/icon_1.svg" alt=""></a>
+    <a href="#none" class="icon-btn-close"><img src="static/images/icon_close.svg" alt=""></a>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    /**
+     * data-scroll-section 사용x
+    */
+    const scrollContainer = document.querySelector('[data-scroll-container]');
+
+    const locoScroll = new LocomotiveScroll({
+      el: scrollContainer,
+      smooth: true,
+      lerp: 0.05,
+      multiplier: 1.2,
+      tablet: {
+        breakpoint: 0,
+      },
+      smartphone: {
+        smooth: false,
+        direction: 'vertical',
+        gestureDirection: 'vertical'
+      }
+    });
+
+    // Header
+    const header = document.querySelector('.box-header');
+    let lastScrollY = 0;
+
+    locoScroll.on('scroll', (instance) => {
+      const scrollY = instance.scroll.y;
+
+      if (scrollY > 30) {
+        if (scrollY > lastScrollY) {
+          header.classList.add('hide');
+        } else {
+          header.classList.remove('hide');
+        }
+      }
+
+      lastScrollY = scrollY;
+      
+      if (scrollY > 100) {
+        header.classList.add('is-active');
+      } 
+    });
+
+
+    header.addEventListener('mouseenter', () => {
+      header.classList.add('is-hover');
+    });
+
+    header.addEventListener('mouseleave', () => {
+      header.classList.remove('is-hover');
+    });
+
+    // btn-top 버튼 클릭 시 맨 위로 스크롤
+    document.getElementById('btn-top').addEventListener('click', function () {
+      locoScroll.scrollTo('top', {
+        duration: 1000, // 스크롤 지속 시간 (밀리초)
+        easing: [0.25, 0.00, 0.35, 1.00], // 스크롤 애니메이션 이징 (베지어 곡선)
+        disableLerp: true // 애니메이션 동안 보간을 비활성화
+      });
+    });
+
+    // Floating 버튼 클릭 이벤트
+    document.querySelector('.box-floating .icon').addEventListener('click', function (event) {
+      event.preventDefault();
+      document.querySelectorAll('.box-floating a').forEach((e) => {
+        e.classList.add('is-active');
+      });
+      document.querySelector('.box-floating .icon').classList.remove('is-active');
+    });
+
+    document.querySelector('.box-floating .icon-btn-close').addEventListener('click', function (event) {
+      event.preventDefault();
+      document.querySelectorAll('.box-floating a').forEach((e) => {
+        e.classList.remove('is-active');
+      });
+      document.querySelector('.box-floating .icon').classList.add('is-active');
+    });
+
+  </script>
+
+</body>
+
+</html>
