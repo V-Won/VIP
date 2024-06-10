@@ -305,6 +305,19 @@ a {
   will-change: transform, background, backdrop-filter;
   transition: transform 500ms, background-color 500ms;
 }
+.box-header.sub-b h1 a {
+  width: 143px;
+  height: 48px;
+  background: url("../images/subB/lobo_sub.png") 0 0 no-repeat !important;
+  background-size: contain !important;
+}
+.box-header.sub-b.is-hover, .box-header.sub-b.is-active {
+  border-bottom: 0 none;
+}
+.box-header.sub-b.is-hover h1 a, .box-header.sub-b.is-active h1 a {
+  background: url("../images/subB/lobo_sub.png") 0 0 no-repeat !important;
+  background-size: contain !important;
+}
 .box-header.start {
   border-bottom: 0 !important;
 }
@@ -523,7 +536,7 @@ a {
   z-index: 20;
   background-color: #fff;
   height: 480px;
-  margin: 192px 96px 192px;
+  margin: 192px 0 192px;
 }
 .box-img-cover.type-2 .inner {
   border-radius: 24px;
