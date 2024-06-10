@@ -522,6 +522,8 @@ a {
   height: 480px;
   margin: 192px 0 192px;
   &.type-2 {
+    margin-left: 96px;
+    margin-right: 96px;
     .inner {
       border-radius: 24px;
       .box-text {
