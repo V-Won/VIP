@@ -1607,6 +1607,7 @@ a {
   justify-content: flex-start;
   padding: 0 96px;
   flex-direction: column;
+  background-color: #fff;
 }
 .type-b .box-header::after {
   display: none;
