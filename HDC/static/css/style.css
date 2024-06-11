@@ -274,7 +274,8 @@ body {
 .header .top-noti img {
   width: 100%;
   height: 60px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: absolute;
   top: 0;
   left: 50%;
@@ -897,7 +898,8 @@ body {
 .box-main.mob .mob-kv .inner-gap-1 img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .box-main.mob .mob-kv .inner-gap-1 .txt-1 {
   width: 276px;
@@ -913,7 +915,8 @@ body {
 .box-main.mob .swiper-1 img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .box-main.mob .swiper-1 .tit-1 {
   width: 100%;
@@ -940,7 +943,8 @@ body {
 .box-main.mob .swiper-2 img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .box-main.mob .swiper-2 .tit-1 {
   width: 100%;
@@ -966,7 +970,8 @@ body {
 .box-main.mob .swiper-3 img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .box-main.mob .swiper-3 .tit-1 {
   width: 100%;
@@ -992,7 +997,8 @@ body {
 .box-main.mob .swiper-4 img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .box-main.mob .swiper-4 .tit-1 {
   width: 100%;
@@ -1031,7 +1037,8 @@ body {
 .box-main.mob .item-box img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .box-main.mob .footer {
   width: 100%;
@@ -1039,7 +1046,8 @@ body {
 .box-main.mob .footer img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .swiper-kv-top {
@@ -1182,12 +1190,14 @@ body {
 .mobile .kv-img-2 img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .mobile .kv-img-2 img.scroll {
   width: 60px;
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   position: absolute;
   left: 50%;
   margin-left: -30px;
