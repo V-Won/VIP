@@ -1309,7 +1309,7 @@ a {
     margin: 0 auto;
   }
   .box-motion-img {
-    padding: 224px 0;
+    padding: 224px 0 60px 0;
     .flex {
       display: flex;
       justify-content: flex-end;
@@ -1395,7 +1395,7 @@ a {
 .box-step {
   padding: 0 221px;
   min-width: 1925px;
-  max-width: 2000px;
+  max-width: 1925px;
   margin: 0 auto;
   .item {
     display: flex;
