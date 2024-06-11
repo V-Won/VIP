@@ -40,17 +40,20 @@
     </div>
     <div class="feature">
       <h4>서비스 특징</h4>
-      <div class="img-wrap" style="text-align: left;"><img src="static/images/mobile/subA/img_feature.jpg" alt="" style="width: 324px;"></div>
+      <div class="img-wrap" style="text-align: left;"><img src="static/images/mobile/subA/img_feature.jpg" alt=""
+          style="width: 324px;"></div>
     </div>
     <div class="process">
       <h4>서비스 이용 프로세스</h4>
-      <div class="img-wrap" style="text-align: center;"><img src="static/images/mobile/subA/img_process.jpg" alt="" style="width: 311px;"></div>
+      <div class="img-wrap" style="text-align: center;"><img src="static/images/mobile/subA/img_process.jpg" alt=""
+          style="width: 311px;"></div>
     </div>
     <div class="service">
       <h4>서비스 이용현황</h4>
       <strong>전국 2,000여개 지점 <br>
         연간 제공 식사 수 2억끼 이상</strong>
-      <div class="img-wrap" style="text-align: center;"><img src="static/images/mobile/subA/img_service.jpg" alt="" style="width: 324px;"></div>
+      <div class="img-wrap" style="text-align: center;"><img src="static/images/mobile/subA/img_service.jpg" alt=""
+          style="width: 324px;"></div>
     </div>
     <div class="state">
       <h4>서비스 납품 현황</h4>
@@ -81,7 +84,7 @@
           <a href="#none"><img src="static/images/mobile/menu_left.jpg" alt="" style="height: 34px;"></a>
           <a href="#none"><img src="static/images/mobile/menu_right.jpg" alt="" style="height: 34px;"></a>
         </div>
-        <img src="static/images/mobile/footer_2.jpg" alt=""style="width: 287px;">
+        <img src="static/images/mobile/footer_2.jpg" alt="" style="width: 287px;">
       </div>
     </div>
   </div>
@@ -106,7 +109,7 @@
     */
     const scrollContainer = document.querySelector('[data-scroll-container]');
 
-    const locoScroll = new LocomotiveScroll({
+    let locoScroll = new LocomotiveScroll({
       el: scrollContainer,
       smooth: true,
       lerp: 0.05,
@@ -137,10 +140,10 @@
       }
 
       lastScrollY = scrollY;
-      
+
       if (scrollY > 100) {
         header.classList.add('is-active');
-      } 
+      }
     });
 
 
@@ -155,9 +158,9 @@
     // btn-top 버튼 클릭 시 맨 위로 스크롤
     document.getElementById('btn-top').addEventListener('click', function () {
       locoScroll.scrollTo('top', {
-        duration: 1000, // 스크롤 지속 시간 (밀리초)
-        easing: [0.25, 0.00, 0.35, 1.00], // 스크롤 애니메이션 이징 (베지어 곡선)
-        disableLerp: true // 애니메이션 동안 보간을 비활성화
+        //duration: 1000, // 스크롤 지속 시간 (밀리초)
+        //easing: [0.25, 0.00, 0.35, 1.00], // 스크롤 애니메이션 이징 (베지어 곡선)
+        //disableLerp: true // 애니메이션 동안 보간을 비활성화
       });
     });
 
