@@ -300,13 +300,16 @@ a {
     border-bottom: 1px solid var(--Stroke-list, #ddd);
     background: var(--Material-bg, rgba(255, 255, 255, 0.9));
     backdrop-filter: blur(25px);
-    
+
     &::after {
       display: none;
     }
     h1 {
       a {
         background-image: url("../images/logo_h1_active.svg");
+        &.sub {
+          background-image: url("../images/logo_h1_active_sub.svg");
+        }
       }
     }
     .gnb {
@@ -343,6 +346,11 @@ a {
       height: 32px;
       will-change: background-image;
       transition: 0.4s background-image;
+      &.sub {
+        width: 142px;
+        height: 47px;
+        background-repeat: no-repeat;
+      }
     }
   }
   .gnb {
@@ -361,6 +369,12 @@ a {
     height: 36px;
     will-change: background-image;
     transition: 0.4s background-image;
+    &.sub {
+      background-image: url(../images/header_etc_sub.png);
+      background-repeat: no-repeat;
+      width: 166px;
+      height: 36px;
+    }
   }
 }
 /* //box-header */
@@ -991,7 +1005,7 @@ a {
         /* Material Blur */
         backdrop-filter: blur(25px);
         overflow: hidden;
-        
+
         img {
           width: 100%;
         }
@@ -1100,8 +1114,6 @@ a {
   }
 }
 */
-
-
 
 .box-gallery {
   background-color: #fff;
@@ -1374,7 +1386,6 @@ a {
         }
       }
       .service {
-
       }
     }
   }
@@ -1387,7 +1398,7 @@ a {
   .visual {
     width: 100%;
     height: 412px;
-    background: url('../images/subB/bg_visual.jpg') 50% 0 no-repeat;
+    background: url("../images/subB/bg_visual.jpg") 50% 0 no-repeat;
     background-size: cover;
   }
 }
@@ -1661,7 +1672,7 @@ a {
       justify-content: space-between;
       border-radius: 0px 0px 8px 8px;
       padding: 12px 40px;
-      background: var(--Primary-Vatal-Orange, #FF5624);
+      background: var(--Primary-Vatal-Orange, #ff5624);
     }
     .menu-wrap {
       display: flex;
@@ -1677,7 +1688,7 @@ a {
         a {
           width: 100%;
           height: 100%;
-          background-image: url('../images/logo_h1_b.png');
+          background-image: url("../images/logo_h1_b.png");
           background-repeat: no-repeat;
           background-size: auto 40px;
         }
@@ -1685,20 +1696,19 @@ a {
       .gnb {
         display: block;
         margin-left: 275px;
-        background-image: url('../images/gnb_b.png');
+        background-image: url("../images/gnb_b.png");
         background-size: 804px auto;
       }
       .etc {
         position: absolute;
-        right: 0;;
+        right: 0;
         top: auto;
         width: 152px;
         height: 42px;
-        background-image: url('../images/menu_right.png');
+        background-image: url("../images/menu_right.png");
         background-repeat: no-repeat;
         margin-top: 35px;
         background-size: 150px auto;
-        
       }
     }
   }
@@ -1712,23 +1722,23 @@ a {
       background-size: auto 952px;
       margin-bottom: 120px;
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         right: 0;
         top: 0;
         width: 731px;
         height: 613px;
-        background: url('../images/bg_round.png') 0 0 no-repeat;
+        background: url("../images/bg_round.png") 0 0 no-repeat;
         background-size: cover;
       }
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         top: 0;
         width: 100%;
         height: 952px;
-        background: url('../images/intro_b.png') 50% 0 no-repeat;
+        background: url("../images/intro_b.png") 50% 0 no-repeat;
         background-size: auto 952px;
       }
     }
@@ -1747,11 +1757,11 @@ a {
     position: relative;
     margin-top: 96px;
     padding: 307px 0 206px;
-    background: url('../images/bg_round_2.png') 0 100% no-repeat;
+    background: url("../images/bg_round_2.png") 0 100% no-repeat;
     background-size: 2103px auto;
     overflow: hidden;
     &::before {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       left: 50%;
@@ -1760,7 +1770,7 @@ a {
       width: 972px;
       height: 973px;
       margin-left: 474px;
-      background: url('../images/bg_line.png') 0 0 no-repeat;
+      background: url("../images/bg_line.png") 0 0 no-repeat;
       background-size: contain;
       // z-index: -1;
     }
@@ -1777,28 +1787,28 @@ a {
       width: 1344px;
       height: 385px;
       margin: 0 auto;
-      background: url('../images/text_service.png') 0 0 no-repeat;
+      background: url("../images/text_service.png") 0 0 no-repeat;
       background-size: cover;
     }
     .title2 {
       width: 1200px;
       height: 118px;
       margin: 324px auto 140px;
-      background: url('../images/text_service_2.png') 50% 0 no-repeat;
+      background: url("../images/text_service_2.png") 50% 0 no-repeat;
       background-size: cover;
     }
     .list {
       float: right;
       width: 1760px;
       height: 626px;
-      background: url('../images/list.png') 0 0 no-repeat;
+      background: url("../images/list.png") 0 0 no-repeat;
       background-size: cover;
     }
   }
   .health {
     height: 480px;
     padding: 96px;
-    background: url('../images/bg_health.jpg') 50% 0 no-repeat;
+    background: url("../images/bg_health.jpg") 50% 0 no-repeat;
     background-size: auto 480px;
   }
   .solution {
@@ -1826,7 +1836,6 @@ a {
       padding-bottom: 80px;
       text-align: center;
     }
-
   }
   .media {
     padding: 192px 96px 0;
@@ -1849,7 +1858,7 @@ a {
   .bottom-wrap {
     padding-top: 192px;
     padding-bottom: 96px;
-    background: url('../images/bg_round_3.jpg') 100% 0 no-repeat;
+    background: url("../images/bg_round_3.jpg") 100% 0 no-repeat;
     background-size: cover;
   }
   .career {
@@ -1857,7 +1866,7 @@ a {
     width: 100%;
     height: 480px;
     padding: 96px;
-    background: url('../images/bg_career.png') 50% 0 no-repeat;
+    background: url("../images/bg_career.png") 50% 0 no-repeat;
     background-size: auto 480px;
   }
   .cs-center {

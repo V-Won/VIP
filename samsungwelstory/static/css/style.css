@@ -336,6 +336,9 @@ a {
 .box-header.is-hover h1 a, .box-header.is-active h1 a {
   background-image: url("../images/logo_h1_active.svg");
 }
+.box-header.is-hover h1 a.sub, .box-header.is-active h1 a.sub {
+  background-image: url("../images/logo_h1_active_sub.svg");
+}
 .box-header.is-hover .gnb, .box-header.is-active .gnb {
   background-image: url("../images/gnb_active.png");
 }
@@ -371,6 +374,11 @@ a {
   will-change: background-image;
   transition: 0.4s background-image;
 }
+.box-header h1 a.sub {
+  width: 142px;
+  height: 47px;
+  background-repeat: no-repeat;
+}
 .box-header .gnb {
   background-image: url(../images/gnb.png);
   width: 642px;
@@ -387,6 +395,12 @@ a {
   height: 36px;
   will-change: background-image;
   transition: 0.4s background-image;
+}
+.box-header .etc.sub {
+  background-image: url(../images/header_etc_sub.png);
+  background-repeat: no-repeat;
+  width: 166px;
+  height: 36px;
 }
 
 /* //box-header */
@@ -1607,7 +1621,7 @@ a {
   justify-content: space-between;
   border-radius: 0px 0px 8px 8px;
   padding: 12px 40px;
-  background: var(--Primary-Vatal-Orange, #FF5624);
+  background: var(--Primary-Vatal-Orange, #ff5624);
 }
 .type-b .box-header .menu-wrap {
   display: flex;
