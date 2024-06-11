@@ -1380,7 +1380,7 @@ a {
 .box-step {
   padding: 0 221px;
   min-width: 1925px;
-  max-width: 1925px;
+  max-width: 2000px;
   margin: 0 auto;
 }
 .box-step .item {
@@ -1395,7 +1395,8 @@ a {
   transform: translateY(48px);
 }
 .box-step .item .left {
-  flex: 1 1 352px;
+  flex: 0 0 347px;
+  width: 300px;
 }
 .box-step .item .right {
   flex: 1;

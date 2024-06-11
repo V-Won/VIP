@@ -1406,7 +1406,7 @@ a {
 .box-step {
   padding: 0 221px;
   min-width: 1925px;
-  max-width: 1925px;
+  max-width: 2000px;
   margin: 0 auto;
   .item {
     display: flex;
@@ -1421,7 +1421,8 @@ a {
       }
     }
     .left {
-      flex: 1 1 352px;
+      flex: 0 0 347px;
+      width: 300px;
     }
     .right {
       flex: 1;
