@@ -1231,6 +1231,9 @@ a {
 .box-new .top-text + .item-list {
   padding-top: 26px;
 }
+.box-new .item-list {
+  padding: 27px 0 0 0;
+}
 .box-new .item-list li {
   display: flex;
   flex-wrap: wrap;
