@@ -10,6 +10,23 @@
   <link rel="stylesheet" href="static/css/style_mo.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <style>
+    body::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background: linear-gradient(0deg, #b3b3b3 0%, #b3b3b3 100%), rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+    }
+
+    body::-webkit-scrollbar-track {
+      background: linear-gradient(0deg, #ececec 0%, #ececec 100%), rgba(0, 0, 0, 0.1);
+    }
+
+    .box-header{transition: none;}
+  </style>
 </head>
 
 <body>
@@ -28,7 +45,8 @@
         첫 걸음을 Story.W와 <br>
         함께 시작하세요.</h2>
     </div>
-    <div style="padding: 0 18px;text-align: left;"><img src="static/images/mobile/subA/text_wrap.jpg" alt="" style="width: 263px;"></div>
+    <div style="padding: 0 18px;text-align: left;"><img src="static/images/mobile/subA/text_wrap.jpg" alt=""
+        style="width: 263px;"></div>
     <div class="news">
       <ul class="item-list">
         <li>
@@ -59,7 +77,7 @@
           <div class="thumb"><img src="static/images/mobile/subA/img_news_3.jpg" alt=""></div>
           <div class="text-wrap">
             <div class="category">웰스토리 소식<em></em><span>24.05.09</span></div>
-            <div class="title">잠깐! 외식업계 리더라면, 
+            <div class="title">잠깐! 외식업계 리더라면,
               집중!</div>
           </div>
           <div class="tags">
@@ -132,7 +150,7 @@
           <a href="#none"><img src="static/images/mobile/menu_left.jpg" alt="" style="height: 34px;"></a>
           <a href="#none"><img src="static/images/mobile/menu_right.jpg" alt="" style="height: 34px;"></a>
         </div>
-        <img src="static/images/mobile/footer_2.jpg" alt=""style="width: 287px;">
+        <img src="static/images/mobile/footer_2.jpg" alt="" style="width: 287px;">
       </div>
     </div>
   </div>
@@ -159,7 +177,7 @@
 
     const locoScroll = new LocomotiveScroll({
       el: scrollContainer,
-      smooth: true,
+      smooth: false,
       lerp: 0.05,
       multiplier: 1.2,
       tablet: {
@@ -188,10 +206,10 @@
       }
 
       lastScrollY = scrollY;
-      
+
       if (scrollY > 100) {
         header.classList.add('is-active');
-      } 
+      }
     });
 
 

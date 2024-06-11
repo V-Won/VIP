@@ -10,6 +10,22 @@
   <link rel="stylesheet" href="static/css/style_mo.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <style>
+    body::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background: linear-gradient(0deg, #b3b3b3 0%, #b3b3b3 100%), rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+    }
+
+    body::-webkit-scrollbar-track {
+      background: linear-gradient(0deg, #ececec 0%, #ececec 100%), rgba(0, 0, 0, 0.1);
+    }
+    .box-header{transition: none;}
+  </style>
 </head>
 
 <body>
@@ -111,7 +127,7 @@
 
     let locoScroll = new LocomotiveScroll({
       el: scrollContainer,
-      smooth: true,
+      smooth: false,
       lerp: 0.05,
       multiplier: 1.2,
       tablet: {
