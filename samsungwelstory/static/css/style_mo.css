@@ -996,14 +996,14 @@ a {
 }
 .box-solution-tab #mainVisual .main_txt .title {
   font-family: "Welstory gothic";
-  margin-top: 20px;
+  margin-top: 16px;
   font-size: 32px;
   font-weight: 400;
   line-height: 40px;
   letter-spacing: -1.92px;
 }
 .box-solution-tab #mainVisual .main_txt .text {
-  margin-top: 22px;
+  margin-top: 14px;
   font-family: Pretendard;
   font-size: 14px;
   font-weight: 500;
@@ -1014,7 +1014,7 @@ a {
   display: block;
   margin-top: 44px;
   font-family: Pretendard;
-  margin: 44px auto 0;
+  margin: 40px auto 0;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: -0.42px;
@@ -1227,6 +1227,9 @@ a {
   display: block;
   width: 277px;
   margin: 0 auto;
+}
+.box-new .top-text + .item-list {
+  padding-top: 26px;
 }
 .box-new .item-list li {
   display: flex;
@@ -1767,7 +1770,7 @@ a {
 }
 
 .sub .title {
-  padding: 94px 18px 0;
+  padding: 158px 18px 0;
 }
 .sub .title span {
   display: block;
