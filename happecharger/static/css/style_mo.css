@@ -38,6 +38,11 @@
   z-index: 1000;
 }
 
+html::-webkit-scrollbar {
+  display: none;
+  scroll-behavior: initial;
+}
+
 html,
 body {
   -webkit-text-size-adjust: none; /* 크롬, 사파리, 오페라 신버전 */
@@ -467,4 +472,28 @@ a {
 }
 .box-membership .box-bottom img {
   width: 100%;
+}
+
+.box-qr {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../images/mo/con_3_bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.box-qr .cover {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.box-qr .cover img {
+  border: 4px solid #fff;
+  border-radius: 20px;
 }/*# sourceMappingURL=style_mo.css.map */
