@@ -264,7 +264,7 @@ a {
 
 // box-header
 .box-header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -349,7 +349,16 @@ a {
       font-weight: 700;
       line-height: 130%; /* 26px */
       letter-spacing: -0.6px;
-      position: relative;
+      position: absolute;
+      top: 525px;
+      left: 0;
+      right: 0;
+      &.posi {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+      }
       &.b-type {
         color: var(--Primary-4, #000);
         text-align: center;
@@ -447,8 +456,32 @@ a {
       }
     }
     .lottie {
-      transform: translateY(-33px);
+      transform: translateY(-128px);
       padding: 0 66px;
+      &#lottie-container-2 {
+        transform: translateY(-99px);
+        padding: 0 48px;
+        &.b-type {
+          padding: 0 23px;
+        }
+      }
+      &#lottie-container-3 {
+        transform: translateY(-99px);
+        padding: 0 5px;
+      }
+      &#lottie-container-4 {
+        transform: translateY(-97px);
+        padding: 0;
+        margin: 0 -89px;
+        &.b-type {
+          padding: 0 68px;
+          margin: 0;
+        }
+      }
+      &#lottie-container-5 {
+        transform: translateY(-99px);
+        padding: 0 48px;
+      }
     }
     .skip {
       position: absolute;
