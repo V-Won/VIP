@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+// text 말줄임
+@mixin text-line {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1; // scss에서 직접 입력. 디폴트 1
+}
+
+// 공통 selectbox custom
+@mixin selectBoxCustom {
+	border-radius: 8px;
+	border: 1px solid var(--bordersbasic);
+	background: var(--primary-2);
+	display: block;
+	width: 100%;
+	height: 58px;
+	line-height: 58px;
+	-webkit-appearance: none;
+	color: var(--textstitle);
+	font-size: 16px;
+	font-weight: 500;
+	letter-spacing: -0.64px;
+	text-indent: 15px;
+	background-repeat: no-repeat;
+	background-position: right 15px center;
+	position: relative;
+	box-sizing: border-box;
+	margin-bottom: 8px;
+	label {
+		position: absolute;
+		top: 18px;
+		left: 0;
+		color: #8c8c8c;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 24px;
+		letter-spacing: -0.64px;
+	}
+	button {
+		position: absolute;
+		top: 3px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 0 34px 0 0;
+		color: var(--textstitle);
+		text-align: right;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 24px;
+	}
+}
+
+// 공통 이미지 holder
+@mixin imgHolder {
+	.img-holder {
+		span,
+		a {
+			padding-top: 100%;
+			position: relative;
+			overflow: hidden;
+			display: block;
+			&::after {
+				content: "";
+				display: block;
+				background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
+			img {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		&.no-dim {
+			span,
+			a {
+				&::after {
+					display: none;
+				}
+			}
+		}
+		&.img-holder-scroll {
+			// scroll motion
+			img {
+				will-change: auto;
+				//transition: all 2s;
+				width: 130%;
+				height: 130%;
+			}
+		}
+	}
+}
+
+// 공통 이미지 mouse scale
+@mixin imgOverScale {
+	.img-over-scale {
+		span,
+		a {
+			img {
+				transition: transform 0.4s;
+				will-change: transform;
+			}
+			&:hover {
+				img {
+					transform: translate(-50%, -50%) scale(1.1);
+				}
+			}
+		}
+	}
+	.img-over-scaleLink {
+		img {
+			transition: transform 0.4s;
+			will-change: transform;
+		}
+		&:hover {
+			img {
+				transform: translate(-50%, -50%) scale(1.1);
+			}
+		}
+	}
+}
+
+/* 1024 이상 PC */
+@media all and (min-width: 1024px) {
+	// 공통 hover text line motion
+	.hover-underline-animation {
+		// 사용법 hover-underline-animation flex-hover hover-item
+		.hover-item {
+			display: inline;
+			position: relative;
+			text-decoration: none;
+			background-image: linear-gradient(to right, black 50%, transparent 50%);
+			/* 왼쪽에서 검은색, 오른쪽으로 투명 */
+			background-size: 210% 1px;
+			/* 너비를 200%로 설정해 왼쪽에서 시작할 수 있도록 함 */
+			background-position: 100% 100%;
+			/* 초기 위치를 오른쪽 끝으로 설정하여 밑줄이 보이지 않게 함 */
+			background-repeat: repeat-x;
+			transition: background-position 0.3s ease-in-out;
+			&.white-type {
+				background-image: linear-gradient(to right, #fff 50%, transparent 50%);
+			}
+		}
+		&:hover {
+			.hover-item {
+				background-position: 0 100%;
+				/* 호버 시 왼쪽 끝에서 시작하도록 설정 */
+			}
+		}
+		.flex-hover {
+			display: flex;
+		}
+	}
+}
