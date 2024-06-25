@@ -1,6 +1,6 @@
 @import "_root.scss";
 
-@import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css');
+@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css");
 
 @font-face {
   font-family: "Welstory Gothic";
@@ -257,3 +257,14 @@ a {
 
 @include imgHolder;
 
+// box-kv
+.box-kv {
+  overflow: hidden;
+  .cover-bg {
+    background-color: #000;
+    .inner {
+      background: red;
+      height: 100vh;
+    }
+  }
+}

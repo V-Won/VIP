@@ -291,4 +291,15 @@ a {
   will-change: auto;
   width: 130%;
   height: 130%;
+}
+
+.box-kv {
+  overflow: hidden;
+}
+.box-kv .cover-bg {
+  background-color: #000;
+}
+.box-kv .cover-bg .inner {
+  background: red;
+  height: 100vh;
 }/*# sourceMappingURL=style.css.map */

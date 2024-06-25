@@ -20,7 +20,17 @@
 
   <div class="wrap" data-scroll-container>
 
-    <div style="background-color: red;height: 3000px;"></div>
+    <!-- box-kv -->
+    <div class="box-kv">
+      <div class="cover-bg">
+        <div class="inner"
+          style="background-image: url('static/images/main_kv.png');background-size: cover;background-position: center;">
+        </div>
+      </div>
+    </div>
+    <!-- //box-kv -->
+
+    <div style="background: #fff;height: 100vh;"></div>
 
     <!-- box-footer -->
     <div class="box-footer">
@@ -73,6 +83,31 @@
     ScrollTrigger.refresh();
 
     gsap.registerPlugin(ScrollTrigger);
+
+    // GSAP과 ScrollTrigger 플러그인을 로드합니다.
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(".box-kv .inner", {
+      yPercent: 50, // y축으로 50% 이동
+      scrollTrigger: {
+        trigger: ".box-kv",
+        scroller: scrollContainer, // Locomotive Scroll과 연동
+        start: "top top", // 스크롤 시작 지점
+        end: "bottom top", // 스크롤 종료 지점
+        scrub: true, // 스크롤에 따라 애니메이션 동기화
+      }
+    });
+
+    gsap.to(".box-kv .inner", {
+      opacity: 0.2, // 투명도 0.4로 변화
+      scrollTrigger: {
+        trigger: ".box-kv",
+        scroller: scrollContainer, // Locomotive Scroll과 연동
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      }
+    });
   </script>
 
 </body>
