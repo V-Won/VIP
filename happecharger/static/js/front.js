@@ -79,6 +79,23 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
+      // scroll top
+      ScrollTrigger.create({
+        trigger: '.box-section-con',
+        start: 'top top', // .box-section-con이 브라우저 상단에 도달할 때
+        scroller: scrollContainer, // Locomotive Scroll과 연동
+        onEnter: () => {
+          setTimeout(() => {
+            document.querySelector('.box-section-con').style.background = '#fff';
+          }, 1000);
+        },
+        onLeaveBack: () => {
+          setTimeout(() => {
+            document.querySelector('.box-section-con').style.background = '#fff';
+          }, 1000);
+        }
+      });
+
 
       // box-kv
       gsap.to(".box-kv .inner", {
