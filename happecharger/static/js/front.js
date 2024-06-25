@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Fetch 요청이 완료된 후 Locomotive Scroll 초기화
   Promise.all([
-    fetch("/include/header.html").then(response => response.text()),
-    fetch("/include/footer.html").then(response => response.text())
+    fetch("include/header.html").then(response => response.text()),
+    fetch("include/footer.html").then(response => response.text())
   ])
     .then(([headerData, footerData]) => {
       document.getElementById("header").innerHTML = headerData;
