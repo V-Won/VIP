@@ -293,6 +293,16 @@ a {
   height: 130%;
 }
 
+.box-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background-color: red;
+  z-index: 1000;
+}
+
 .box-kv {
   overflow: hidden;
 }
