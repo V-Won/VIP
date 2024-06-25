@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
         lerp: 0.05,
         multiplier: 1.2,
         tablet: {
-          breakpoint: 1930, // tablet 모드 기준 화면 크기
-          smooth: false
+          // breakpoint: 1930, // tablet 모드 기준 화면 크기
+          // smooth: false
         },
         smartphone: {
           smooth: false,
@@ -230,6 +230,17 @@ document.addEventListener("DOMContentLoaded", function () {
           navLinks[index].classList.add('is-active');
         }
       }
+
+      ScrollTrigger.create({
+        trigger: ".sec-2",
+        start: "top center",
+        end: "bottom bottom",
+        markers: false,
+        scroller: scrollContainer, // Locomotive Scroll과 연동
+        onLeaveBack: () => {
+          boxSectionCon.style.background = '#fff';
+        },
+      });
 
       ScrollTrigger.create({
         trigger: ".sec-3",
