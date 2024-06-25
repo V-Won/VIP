@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
         lerp: 0.05,
         multiplier: 1.2,
         tablet: {
-          //breakpoint: 1930, // tablet 모드 기준 화면 크기
-          //smooth: false
+          breakpoint: 1930, // tablet 모드 기준 화면 크기
+          smooth: false
         },
         smartphone: {
           smooth: false,
@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       activateSection();
-      setInterval(activateSection, 5000);
+      setInterval(activateSection, 4000);
 
       // count
       const counters = document.querySelectorAll('.count');
@@ -194,6 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // box-page is-active
       const sectionsItem = document.querySelectorAll('.box-section-con .section');
       const navLinks = document.querySelectorAll('.box-page a');
+      const boxSectionCon = document.querySelector('.box-section-con');
 
       sectionsItem.forEach((section, index) => {
         ScrollTrigger.create({
@@ -214,14 +215,63 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       ScrollTrigger.create({
+        trigger: ".sec-3",
+        start: "top center",
+        end: "bottom bottom",
+        markers: false,
+        scroller: scrollContainer, // Locomotive Scroll과 연동
+        onLeaveBack: () => {
+          gsap.to(boxSectionCon, {
+            background: '#fff',
+            duration: 0 // 애니메이션 없이 즉시 변경됩니다.
+          });
+        },
+      });
+
+      ScrollTrigger.create({
+        trigger: ".sec-4",
+        start: "top center",
+        end: "bottom bottom",
+        markers: false,
+        scroller: scrollContainer, // Locomotive Scroll과 연동
+        onEnter: () => {
+          gsap.to(boxSectionCon, {
+            background: 'linear-gradient(180deg, #000 0%, #1A242E 100%)',
+            duration: 1 // 1초 동안 애니메이션이 진행됩니다. 필요에 따라 조절하세요.
+          });
+        },
+        onLeave: () => {
+          gsap.to(boxSectionCon, {
+            //background: '#fff',
+            //duration: 1 // 애니메이션 없이 즉시 변경됩니다.
+          });
+        },
+        onLeaveBack: () => {
+          gsap.to(boxSectionCon, {
+            background: '#fff',
+            duration: 0.5 // 애니메이션 없이 즉시 변경됩니다.
+          });
+        },
+        onEnterBack: () => {
+          gsap.to(boxSectionCon, {
+            background: 'linear-gradient(180deg, #000 0%, #1A242E 100%)',
+            duration: 1 // 1초 동안 애니메이션이 진행됩니다. 필요에 따라 조절하세요.
+          });
+        }
+      });
+
+      ScrollTrigger.create({
         trigger: ".box-page",
         start: "top 190px",
         endTrigger: ".sec-5",
         end: "bottom bottom",
-        scroller: scrollContainer, // Locomotive Scroll과 연동
         pin: true,
-        pinSpacing: false
+        pinSpacing: false,
+        scroller: scrollContainer, // Locomotive Scroll과 연동
       });
+
+
+
 
 
 
