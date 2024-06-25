@@ -575,6 +575,7 @@ a {
     0.7s top,
     0.3s opacity;
   will-change: top, opacity;
+  pointer-events: none;
   &.b-type {
     background-color: #fff;
     .box-bottom {
@@ -587,6 +588,7 @@ a {
     }
   }
   &.is-active {
+    pointer-events: all;
     top: 0;
     opacity: 1;
     .box-bottom {

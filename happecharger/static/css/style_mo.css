@@ -581,6 +581,7 @@ a {
   background: var(--Secondary-4, #2d4396);
   transition: 0.7s top, 0.3s opacity;
   will-change: top, opacity;
+  pointer-events: none;
 }
 .box-membership.b-type {
   background-color: #fff;
@@ -593,6 +594,7 @@ a {
   box-shadow: 0px -4px 8px 0px rgba(0, 0, 0, 0.12);
 }
 .box-membership.is-active {
+  pointer-events: all;
   top: 0;
   opacity: 1;
 }
