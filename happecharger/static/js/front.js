@@ -1,4 +1,3 @@
-// 페이지 로드가 완료되면 실행
 document.addEventListener("DOMContentLoaded", function () {
   const scrollContainer = document.querySelector('[data-scroll-container]');
 
@@ -18,7 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
         lerp: 0.05,
         multiplier: 1.2,
         tablet: {
-          breakpoint: 0,
+          //breakpoint: 1930, // tablet 모드 기준 화면 크기
+          //smooth: false
         },
         smartphone: {
           smooth: false,
@@ -57,6 +57,8 @@ document.addEventListener("DOMContentLoaded", function () {
           scrub: true, // 스크롤에 따라 애니메이션 동기화
         }
       });
+
+      document.querySelector('.box-header').classList.add('show');
     })
     .catch(error => {
       console.error('Error fetching the header or footer:', error);
