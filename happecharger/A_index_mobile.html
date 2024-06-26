@@ -74,7 +74,7 @@
     <!-- //box-intro -->
 
     <!-- box-membership -->
-    <a href="A_index_mobile_2.html">
+    <a href="A_index_mobile_2.html" class="box-mem">
       <div class="box-membership">
         <p class="text-1">
           <img src="static/images/mo/text_1.png" alt="">
@@ -200,7 +200,10 @@
     // skip click
     document.querySelector('.skip').addEventListener('click', function (event) {
       event.preventDefault();
-      document.querySelector('.box-membership').classList.add('is-active');
+      document.querySelector('.box-mem').classList.add('is-active');
+      setTimeout(() => {
+        document.querySelector('.box-membership').classList.add('is-active');
+      }, 100);
     });
 
   </script>

@@ -296,6 +296,7 @@ a {
 
 // box-intro
 .wrap {
+  overflow-x: hidden;
   &.mo {
     display: flex;
     height: 100%;
@@ -561,6 +562,13 @@ a {
   }
 }
 
+.box-mem {
+  display: none;
+  &.is-active {
+    display: block;
+  }
+}
+
 .box-membership {
   position: absolute;
   top: 100%;
@@ -576,6 +584,15 @@ a {
     0.3s opacity;
   will-change: top, opacity;
   pointer-events: none;
+  &.is-active {
+    pointer-events: all;
+    top: 0;
+    opacity: 1;
+    .box-bottom {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
   &.b-type {
     background-color: #fff;
     .box-bottom {
@@ -585,15 +602,6 @@ a {
 
       /* Float Shadow */
       box-shadow: 0px -4px 8px 0px rgba(0, 0, 0, 0.12);
-    }
-  }
-  &.is-active {
-    pointer-events: all;
-    top: 0;
-    opacity: 1;
-    .box-bottom {
-      opacity: 1;
-      transform: translateY(0);
     }
   }
   .lottie {

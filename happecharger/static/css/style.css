@@ -689,6 +689,12 @@ a {
 .box-service .inner .lottie.logo {
   text-align: center;
 }
+.box-service .inner #lottie-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .box-ex .inner {
   max-width: 1228px;

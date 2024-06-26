@@ -332,6 +332,9 @@ a {
   right: 0;
 }
 
+.wrap {
+  overflow-x: hidden;
+}
 .wrap.mo {
   display: flex;
   height: 100%;
@@ -569,6 +572,13 @@ a {
   height: 8px;
 }
 
+.box-mem {
+  display: none;
+}
+.box-mem.is-active {
+  display: block;
+}
+
 .box-membership {
   position: absolute;
   top: 100%;
@@ -583,6 +593,15 @@ a {
   will-change: top, opacity;
   pointer-events: none;
 }
+.box-membership.is-active {
+  pointer-events: all;
+  top: 0;
+  opacity: 1;
+}
+.box-membership.is-active .box-bottom {
+  opacity: 1;
+  transform: translateY(0);
+}
 .box-membership.b-type {
   background-color: #fff;
 }
@@ -592,15 +611,6 @@ a {
   background: var(--Primary-2, #f4f4f6);
   /* Float Shadow */
   box-shadow: 0px -4px 8px 0px rgba(0, 0, 0, 0.12);
-}
-.box-membership.is-active {
-  pointer-events: all;
-  top: 0;
-  opacity: 1;
-}
-.box-membership.is-active .box-bottom {
-  opacity: 1;
-  transform: translateY(0);
 }
 .box-membership .lottie {
   position: absolute;
