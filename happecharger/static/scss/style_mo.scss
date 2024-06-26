@@ -502,6 +502,7 @@ a {
   }
   .section-3 {
     pointer-events: none;
+    overflow: hidden;
     &.is-active {
       pointer-events: all;
     }

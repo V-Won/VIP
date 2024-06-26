@@ -522,6 +522,7 @@ a {
 }
 .box-intro .section-3 {
   pointer-events: none;
+  overflow: hidden;
 }
 .box-intro .section-3.is-active {
   pointer-events: all;
