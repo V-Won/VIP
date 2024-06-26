@@ -316,6 +316,46 @@ document.addEventListener("DOMContentLoaded", function () {
         scroller: scrollContainer, // Locomotive Scroll과 연동
       });
 
+      // box-list img
+      const imagesImg = document.querySelectorAll('.box-list img');
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.box-list',
+          start: 'top 80%',
+          scroller: scrollContainer,
+          markers: false,
+          //toggleActions: 'restart restart restart restart',
+        }
+      });
+
+      imagesImg.forEach((img, index) => {
+        tl.fromTo(img,
+          { y: 100, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            delay: index * 0.2 // 각 이미지에 1초 간격으로 딜레이
+          },
+          '-=0.5' // 약간의 오버랩을 위해 추가
+        );
+      });
+
+      // sc img scroll
+      gsap.fromTo('.animate-image',
+        { y: 0 },
+        {
+          y: -1000,
+          scrollTrigger: {
+            trigger: '.animate-image',
+            start: 'top center',
+            scroller: scrollContainer,
+            markers: true,
+            toggleActions: 'play none none none',
+            scrub: true,
+          }
+        }
+      );
 
 
 

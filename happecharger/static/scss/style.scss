@@ -426,6 +426,27 @@ a {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        .mobile {
+          background-image: url("../images/mobile.png");
+          width: 354px;
+          height: 756px;
+          position: relative;
+          padding: 11px 0 0 12px;
+          .sc {
+            border-radius: 48px;
+            overflow: hidden;
+            height: 733px;
+            width: 331px;
+            .bottom {
+              position: absolute;
+              bottom: 12px;
+              left: 12px;
+              right: 12px;
+              width: 330px;
+              border-radius: 0 0 48px 48px;
+            }
+          }
+        }
       }
     }
     &.sec-4 {
@@ -722,5 +743,19 @@ a {
     align-items: center;
     justify-content: space-between;
     background: var(--BG-Gray_Blue, #eff1f3);
+  }
+}
+
+.box-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  img {
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    transform: translateY(100px);
+    opacity: 0;
   }
 }
