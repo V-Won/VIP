@@ -378,19 +378,43 @@ a {
 }
 .box-kv .cover-bg {
   background-color: #000;
+  position: relative;
+  height: 100vh;
 }
 .box-kv .cover-bg .inner {
   height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.box-kv .cover-bg .inner.is-active .bg {
+  opacity: 1;
+}
+.box-kv .cover-bg .inner .bg {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 1s opacity;
+  opacity: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
-.box-kv .cover-bg .inner .icon {
+.box-kv .cover-bg .icon {
   position: absolute;
   bottom: 84px;
   left: 50%;
   transform: translateX(-50%);
+}
+.box-kv .cover-bg .box-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 42px;
 }
 
 .box-section-con {

@@ -79,6 +79,24 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
+      // kv img
+      const inners = document.querySelectorAll('.box-kv .cover-bg .inner');
+      let currentIndex = 0;
+
+      function addIsActiveClass() {
+        inners.forEach((inner, index) => {
+          if (index === currentIndex) {
+            inner.classList.add('is-active');
+          } else {
+            inner.classList.remove('is-active');
+          }
+        });
+        currentIndex = (currentIndex + 1) % inners.length;
+      }
+
+      setInterval(addIsActiveClass, 4000); // 3000ms = 3초
+      addIsActiveClass(); // 초기 상태에서 첫 번째 요소에 클래스 추가
+
       // scroll top
       ScrollTrigger.create({
         trigger: '.box-section-con',
