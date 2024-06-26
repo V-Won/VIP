@@ -350,7 +350,7 @@ document.addEventListener("DOMContentLoaded", function () {
             trigger: '.animate-image',
             start: 'top center',
             scroller: scrollContainer,
-            markers: true,
+            markers: false,
             toggleActions: 'play none none none',
             scrub: true,
           }
