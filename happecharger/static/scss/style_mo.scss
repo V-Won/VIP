@@ -222,7 +222,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #222;
+  background: #fff;
   .mobile-frame {
     width: 413px;
     height: 844px;
@@ -656,6 +656,56 @@ a {
     img {
       border: 4px solid #fff;
       border-radius: 20px;
+    }
+  }
+}
+
+// box-link
+.box-link {
+  position: absolute;
+  top: 65px;
+  left: 61px;
+  .text {
+    .text-1 {
+    }
+    .text-2 {
+      color: #000;
+      font-family: Pretendard;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 140%; /* 28px */
+      letter-spacing: -0.6px;
+      opacity: 0;
+      transition: opacity 0.4s;
+      position: absolute;
+      top: 144px;
+      left: 0;
+      &.is-active {
+        opacity: 1;
+      }
+    }
+  }
+  .link {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 144px;
+    left: 374px;
+    width: 200px;
+    a {
+      color: #000;
+      font-family: Pretendard;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%; /* 21.6px */
+      letter-spacing: -0.54px;
+      height: 56px;
+      &.is-active {
+        font-size: 24px;
+        letter-spacing: -0.72px;
+      }
     }
   }
 }

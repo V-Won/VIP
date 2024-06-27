@@ -26,8 +26,67 @@
     <!-- box-intro -->
     <div class="box-intro">
       <section class="section-1 ci"><img src="static/images/mo/ci.png" alt="" style="width: 296px;"></section>
+      <section class="section-2">
+        <div class="lottie" id="lottie-container-1"></div>
+        <p class="text-1">
+          충전할 때마다<br>
+          고객의 미소도<br>
+          함께 충전 할께요
+        </p>
+      </section>
+      <section class="section-3">
+        <a href="#" class="skip">skip</a>
+        <div class="intro-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="lottie" id="lottie-container-2"></div>
+              <p class="text-1">
+                번거로움 없이<br>
+                충전하세요
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <div class="lottie" id="lottie-container-3"></div>
+              <p class="text-1">
+                간편하게 휴대폰으로<br>
+                결제 하세요
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <div class="lottie" id="lottie-container-4"></div>
+              <p class="text-1">
+                Tip.<br>
+                구독하고 비용을 절약하세요.
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <div class="lottie" id="lottie-container-5"></div>
+              <p class="text-1">
+                지금 바로 근처 충전소를<br>
+                찾아보세요
+              </p>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
     </div>
     <!-- //box-intro -->
+
+    <!-- box-membership -->
+    <!-- <a href="A_index_mobile_2.html" class="box-mem"> -->
+    <a href="#none" class="box-mem">
+      <div class="box-membership">
+        <p class="text-1">
+          <img src="static/images/mo/text_1.png" alt="">
+        </p>
+        <div class="lottie" id="lottie-container-6"></div>
+        <div class="box-bottom">
+          <img src="static/images/mo/main_sns.png" alt="">
+        </div>
+      </div>
+    </a>
+    <!-- //box-membership -->
 
     <!-- box-footer -->
     <div class="box-footer"></div>
@@ -137,6 +196,15 @@
         el: '.intro-swiper .swiper-pagination',
         clickable: true,
       },
+    });
+
+    // skip click
+    document.querySelector('.skip').addEventListener('click', function (event) {
+      event.preventDefault();
+      document.querySelector('.box-mem').classList.add('is-active');
+      setTimeout(() => {
+        document.querySelector('.box-membership').classList.add('is-active');
+      }, 100);
     });
 
   </script>

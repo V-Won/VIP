@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initiainclude-htmll-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+  <meta name="viewport"
+    content="width=device-width, initiainclude-htmll-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
 
   <title>해피차저 | 초고속 HappeCharger</title>
   <link rel="stylesheet" href="static/css/style_mo.css">
@@ -30,9 +31,89 @@
 
 <body class="hdc-frame">
 
-  <div class="mobile-frame">
-    <iframe src="A_index_mobile.html" title="" width="375px" height="812px"></iframe>
+  <div class="box-link">
+    <div class="text">
+      <p class="text-1">
+        <img src="static/images/text_1.png" alt="" style="margin-right:162px;">
+        <img src="static/images/text_2.png" alt="">
+      </p>
+      <p class="text-2 is-active" data-index="1">
+        친근한 일러스트 활용으로<br>
+        부드럽고 경쾌한 느낌으로 디자인
+      </p>
+      <p class="text-2" data-index="2">
+        스플래시의 활용으로<br>
+        이용안내를 노출하고, <br>
+        마이크로인터랙션의 활용으로 <br>
+        주목도를 높임
+      </p>
+      <p class="text-2" data-index="3">
+        간편 로그인
+      </p>
+      <p class="text-2" data-index="4">
+        로그인전 화면에서 해피차저의<br>
+        앱을 둘러보기 할수 있게 하였다
+      </p>
+      <p class="text-2" data-index="5">
+        차량충전-이용내역-충전소찾기-<br>
+        포인트-차량정보-혜택-CS로<br>
+        이루어지는 플로우로 구성으로<br>
+        찾아들어가지 않고도 메인화면에 <br>
+        주요기능을 모두 노출하여<br>
+        사용성을 높였다
+      </p>
+      <p class="text-2" data-index="6"></p>
+    </div>
+    <div class="link">
+      <a href="#" data-src="A_index_mobile_frame.html" class="is-active">인트로</a>
+      <a href="#" data-src="A_index_mobile_splash.html">스플래시</a>
+      <a href="#" data-src="A_index_mobile_login.html">로그인</a>
+      <a href="#" data-src="A_index_mobile_login_1.html">로그인전 메인</a>
+      <a href="#" data-src="A_index_mobile_login_2.html">로그인후 메인</a>
+      <a href="#" data-src="A_index_mobile_qr.html">QR</a>
+    </div>
   </div>
+
+  <div class="mobile-frame">
+    <iframe src="A_index_mobile.html" title="" width="375px" height="812px" id="mobile-frame-iframe"></iframe>
+  </div>
+
+  <script>
+    document.querySelectorAll('.box-link .link a').forEach(link => {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        // iframe src 변경
+        const iframe = document.getElementById('mobile-frame-iframe');
+        iframe.src = this.getAttribute('data-src');
+
+        // 모든 text-2 클래스에서 is-active 제거
+        document.querySelectorAll('.text .text-2').forEach(p => p.classList.remove('is-active'));
+
+        // 모든 a 태그에서 is-active 제거
+        document.querySelectorAll('.box-link .link a').forEach(a => a.classList.remove('is-active'));
+
+        // 클릭된 링크의 data-src에 따른 data-index 찾기 및 is-active 추가
+        const srcToIndexMap = {
+          'A_index_mobile_frame.html': 1,
+          'A_index_mobile_splash.html': 2,
+          'A_index_mobile_login.html': 3,
+          'A_index_mobile_login_1.html': 4,
+          'A_index_mobile_login_2.html': 5,
+          'A_index_mobile_qr.html': 6
+        };
+
+        const index = srcToIndexMap[this.getAttribute('data-src')];
+        const activeText = document.querySelector(`.text .text-2[data-index="${index}"]`);
+        if (activeText) {
+          activeText.classList.add('is-active');
+        }
+
+        // 클릭된 a 태그에 is-active 추가
+        this.classList.add('is-active');
+      });
+    });
+  </script>
 
 </body>
 

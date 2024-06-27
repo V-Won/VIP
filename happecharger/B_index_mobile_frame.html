@@ -31,9 +31,76 @@
 
 <body class="hdc-frame">
 
-  <div class="mobile-frame">
-    <iframe src="B_index_mobile.html" title="" width="375px" height="812px"></iframe>
+  <div class="box-link">
+    <div class="text">
+      <p class="text-1">
+        <img src="static/images/text_1.png" alt="" style="margin-right:162px;">
+        <img src="static/images/text_3.png" alt="">
+      </p>
+      <p class="text-2 is-active" data-index="1">
+        심플하며 미니멀한 디자인으로<br>
+        세련된 룩앤필로 접근.
+      </p>
+      <p class="text-2" data-index="2">
+        스플래시의 활용으로<br>
+        이용안내를 노출하고, 마이크로<br>
+        인터랙션의 활용으로 <br>
+        주목도를 높임
+      </p>
+      <p class="text-2" data-index="3">
+        간편 로그인
+      </p>
+      <p class="text-2" data-index="4">
+        미니멀하고 심플한 룩앤필로 <br>
+        필요한 기능들로만 메인을 구성
+      </p>
+    </div>
+    <div class="link">
+      <a href="#" data-src="B_index_mobile_frame.html" class="is-active">인트로</a>
+      <a href="#" data-src="B_index_mobile_splash.html">스플래시</a>
+      <a href="#" data-src="B_index_mobile_login.html">로그인</a>
+      <a href="#" data-src="B_index_mobile_main.html">메인</a>
+    </div>
   </div>
+
+  <div class="mobile-frame">
+    <iframe src="B_index_mobile.html" title="" width="375px" height="812px" id="mobile-frame-iframe"></iframe>
+  </div>
+
+  <script>
+    document.querySelectorAll('.box-link .link a').forEach(link => {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        // iframe src 변경
+        const iframe = document.getElementById('mobile-frame-iframe');
+        iframe.src = this.getAttribute('data-src');
+
+        // 모든 text-2 클래스에서 is-active 제거
+        document.querySelectorAll('.text .text-2').forEach(p => p.classList.remove('is-active'));
+
+        // 모든 a 태그에서 is-active 제거
+        document.querySelectorAll('.box-link .link a').forEach(a => a.classList.remove('is-active'));
+
+        // 클릭된 링크의 data-src에 따른 data-index 찾기 및 is-active 추가
+        const srcToIndexMap = {
+          'B_index_mobile_frame.html': 1,
+          'B_index_mobile_splash.html': 2,
+          'B_index_mobile_login.html': 3,
+          'B_index_mobile_main.html': 4,
+        };
+
+        const index = srcToIndexMap[this.getAttribute('data-src')];
+        const activeText = document.querySelector(`.text .text-2[data-index="${index}"]`);
+        if (activeText) {
+          activeText.classList.add('is-active');
+        }
+
+        // 클릭된 a 태그에 is-active 추가
+        this.classList.add('is-active');
+      });
+    });
+  </script>
 
 </body>
 

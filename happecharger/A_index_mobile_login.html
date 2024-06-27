@@ -23,11 +23,20 @@
 
   <div class="wrap mo" data-scroll-container>
 
-    <!-- box-intro -->
-    <div class="box-intro">
-      <section class="section-1 ci"><img src="static/images/mo/ci.png" alt="" style="width: 296px;"></section>
-    </div>
-    <!-- //box-intro -->
+    <!-- box-membership -->
+    <!-- <a href="A_index_mobile_2.html" class="box-mem"> -->
+    <a href="#none" class="box-mem">
+      <div class="box-membership">
+        <p class="text-1">
+          <img src="static/images/mo/text_1.png" alt="">
+        </p>
+        <div class="lottie" id="lottie-container-6"></div>
+        <div class="box-bottom">
+          <img src="static/images/mo/main_sns.png" alt="">
+        </div>
+      </div>
+    </a>
+    <!-- //box-membership -->
 
     <!-- box-footer -->
     <div class="box-footer"></div>
@@ -138,6 +147,12 @@
         clickable: true,
       },
     });
+
+    // skip
+    document.querySelector('.box-mem').classList.add('is-active');
+    setTimeout(() => {
+      document.querySelector('.box-membership').classList.add('is-active');
+    }, 100);
 
   </script>
 

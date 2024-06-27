@@ -25,7 +25,60 @@
 
     <!-- box-intro -->
     <div class="box-intro">
-      <section class="section-1 ci"><img src="static/images/mo/ci.png" alt="" style="width: 296px;"></section>
+      <section class="section-2">
+        <!-- <div class="lottie" id="lottie-container-1"></div> -->
+        <p class="text-1 posi b-type">
+          <span>
+            충전할 때마다<br>
+            고객의 <span><strong>미소</strong></span>도<br>
+            함께 충전 할께요
+          </span>
+        </p>
+      </section>
+      <section class="section-3">
+        <a href="#" class="skip">skip</a>
+        <div class="intro-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="lottie b-type" id="lottie-container-2"></div>
+              <p class="text-1 b-type-2">
+                <span>
+                  <span><strong>번거로움</strong></span> 없이<br>
+                  충전하세요
+                </span>
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <div class="lottie" id="lottie-container-3"></div>
+              <p class="text-1 b-type-2">
+                <span>
+                  간편하게 <span><strong>휴대폰</strong></span>으로<br>
+                  결제 하세요
+                </span>
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <div class="lottie b-type" id="lottie-container-4"></div>
+              <p class="text-1 b-type-2">
+                <span>
+                  Tip.<br>
+                  <span><strong>구독</strong></span>하고 비용을 절약하세요.
+                </span>
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <div class="lottie" id="lottie-container-5"></div>
+              <p class="text-1 b-type-2">
+                <span>
+                  지금 바로 <span><strong>근처 충전소</strong></span>를<br>
+                  찾아보세요
+                </span>
+              </p>
+            </div>
+          </div>
+          <div class="swiper-pagination b-type"></div>
+        </div>
+      </section>
     </div>
     <!-- //box-intro -->
 
@@ -98,7 +151,7 @@
 
     // ani json
     const lottieContainers = [
-      'lottie-container-1',
+      //'lottie-container-1',
       'lottie-container-2',
       'lottie-container-3',
       'lottie-container-4',
@@ -107,12 +160,12 @@
     ];
 
     const jsonFiles = [
-      'static/json/intro_2.json',
-      'static/json/intro_3.json',
-      'static/json/intro_4.json',
-      'static/json/intro_5.json',
-      'static/json/intro_6.json',
-      'static/json/intro_7.json'
+      //'static/json/intro_2.json',
+      'static/json/B/intro_3.json', // 자동차
+      'static/json/B/intro_4.json', // 휴대폰
+      'static/json/B/intro_5.json', // 컴퓨터
+      'static/json/B/intro_6.json', // 지도
+      'static/json/intro_7.json' // e
     ];
 
     lottieContainers.forEach((containerId, index) => {
@@ -138,6 +191,15 @@
         clickable: true,
       },
     });
+
+    // skip click
+    // document.querySelector('.skip').addEventListener('click', function (event) {
+    //   event.preventDefault();
+    //   document.querySelector('.box-mem').classList.add('is-active');
+    //   setTimeout(() => {
+    //     document.querySelector('.box-membership').classList.add('is-active');
+    //   }, 10);
+    // });
 
   </script>
 
